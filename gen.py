@@ -168,7 +168,7 @@ def main(args):
         n = X.shape[0]
 
     with open(args.output, "wb") as f:
-        tC = sum(C_G) + C
+        tC = sum(C_G) + C if args.sep == "group" else C
         tmp = {}
         tmp["number"] = N
         tmp["class"] = tC
