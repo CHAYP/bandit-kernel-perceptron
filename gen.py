@@ -180,6 +180,7 @@ def main(args):
         tmp["Y"] = Y
         tmp["W"] = W
         tmp["U"] = U
+        tmp["name"] = f"{tC} classes {N} samples with gamma {G} in {args.sep} setting"
         np.save(f, tmp)
 
         print(f"Number of examples: {N}")

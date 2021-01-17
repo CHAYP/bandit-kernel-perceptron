@@ -13,6 +13,7 @@ def main(args):
         G = data["gamma"]
         X = data["X"]
         Y = data["Y"]
+        name = data["name"]
 
     print(f"Number of examples: {N}")
     print(f"Number of classes: {C}")
@@ -26,6 +27,7 @@ def main(args):
     ax.set_aspect("equal", "box")
     plt.grid(linestyle="--")
     plt.scatter(X[:, 0], X[:, 1], c=Y[:, 0], s=10)
+    ax.set_title(name)
     plt.show()
 
 
