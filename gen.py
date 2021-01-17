@@ -28,10 +28,12 @@ def unit_ball(N, d=2, r=1):
 
 def filename_increment(fname):
     ftype = "npy"
-    i = 1
-    while os.path.exists(f"{fname}_{i}.{ftype}"):
-        i += 1
-    return f"{fname}_{i}.{ftype}"
+    if os.path.exists(f"{fname}.{ftype}"):
+        i = 1
+        while os.path.exists(f"{fname}_{i}.{ftype}"):
+            i += 1
+        return f"{fname}_{i}.{ftype}"
+    return f"{fname}.{ftype}"
 
 
 def parse_ouput(fname):
